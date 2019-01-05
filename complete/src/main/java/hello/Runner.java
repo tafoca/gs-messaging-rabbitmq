@@ -20,7 +20,9 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Sending message...");
-        rabbitTemplate.convertAndSend(Application.topicExchangeName, "foo.bar.baz", "Hello from RabbitMQ!");
+        String[] msgs= {"one","two","three","four","five","six"} ;
+        rabbitTemplate.convertAndSend(Application.topicExchangeName, "foo.bar.draqon", msgs);
+        // rabbitTemplate.convertAndSend(Application.topicExchangeName, "foo.bar.drqqon", "Hello from RabbitMQ Run!");
         receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
     }
 

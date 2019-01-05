@@ -13,6 +13,18 @@ public class Receiver {
         latch.countDown();
     }
 
+    String genStr(String...s){
+        String res="";
+        for (int i=0; i < s.length;i++) res += " | " + s[i] + " | ";
+        return res;
+    }
+
+    public void receiveMessage1(String...messages) {
+        System.out.println("Received  << " + genStr(messages) + " >>");
+        latch.countDown();
+    }
+
+
     public CountDownLatch getLatch() {
         return latch;
     }

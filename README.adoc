@@ -137,7 +137,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 You should see the following output:
 
     Sending message...
-    Received <Hello from RabbitMQ!>
+    Received  <<  | one |  | two |  | three |  | four |  | five |  | six |  >>
 
 == Summary
 Congratulations! You've just developed a simple publish-and-subscribe application with Spring and RabbitMQ. There's http://docs.spring.io/spring-amqp/reference/html/_introduction.html#quick-tour[more you can do with Spring and RabbitMQ] than what is covered here, but this should provide a good start.

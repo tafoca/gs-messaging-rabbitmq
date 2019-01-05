@@ -45,7 +45,9 @@ public class Application {
 
     @Bean
     MessageListenerAdapter listenerAdapter(Receiver receiver) {
-        return new MessageListenerAdapter(receiver, "receiveMessage");
+        //receiveMessage is the message that was executed and write in Receiver component inject.
+        // [chose one of his method callback :{receiveMessage1,receiveMessage}]
+        return new MessageListenerAdapter(receiver, "receiveMessage1");
     }
 
     public static void main(String[] args) throws InterruptedException {
